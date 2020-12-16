@@ -1,4 +1,19 @@
 .sidebar {
     grid-area: nav;
     background-color: yellow;
+    padding: 25px;
+  }
+  .list {
+    list-style-type: none;
+    
+  }
+  .link {
+    text-decoration: none;
+    color: #000;
+  }
+  .link:hover {
+    color: grey;
+  }
+  .link.active {
+    color: gold;
   }

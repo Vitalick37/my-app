@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+ul {
+    list-style-type: none;
+}
+.name {
+    min-width: 200px;
+}
+.name_item {
+    margin-bottom: 20px;
+}
+.message_item {
+    margin-bottom: 30px;
+}
+.name_link {
+    text-decoration: none;
+    color: #000;
+}
+.name_link:hover {
+    color: grey;
+}
+.name_link.active {
+    color: gold;
+}
