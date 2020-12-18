@@ -1,19 +1,17 @@
 import { useLayoutEffect } from 'react';
 import classes from './Content.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Content = () => {
-return (
+    return (
 
-    <div className={classes.content}>
-    <div>ava + descr</div>
-    <MyPosts />
-    <div>new posts</div>
-    <div>message</div>
-    <div>new message</div>
-    </div>
+        <div className={classes.content}>
+            <ProfileInfo />
+            <MyPosts />
+        </div>
 
-);
+    );
 
 }
 
