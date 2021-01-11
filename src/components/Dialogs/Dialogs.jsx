@@ -11,7 +11,7 @@ const DialogItem = (props) => {
 }
 const MessageItem = (props) => {
     return (
-        <li className={s.message_item}>{props.messIt}</li>
+        <li className={s.message_item}>{props.messageItem}</li>
     )
 }
 
@@ -33,9 +33,9 @@ const Dialogs = () => {
                 <div className={s.message}>
                     <ul className={s.message_list}>
                         {/* <Route path='/numberMessage' component={MessageItem} /> */}
-                        <MessageItem messIt='hi'/>
-                        <MessageItem messIt='how are you?'/>
-                        <MessageItem messIt='i`m fine'/>
+                        <MessageItem messageItem='hi'/>
+                        <MessageItem messageItem='how are you?'/>
+                        <MessageItem messageItem='i`m fine'/>
                     </ul>
                 </div>
             </div>

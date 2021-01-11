@@ -1,11 +1,13 @@
 .sidebar {
     grid-area: nav;
-    background-color: yellow;
+    background-color: #B0C4DE;
     padding: 25px;
   }
   .list {
     list-style-type: none;
-    
+  }
+  .item {
+    margin-bottom: 35px;
   }
   .link {
     text-decoration: none;
