@@ -23,4 +23,6 @@ ul {
 }
 .name_link.active {
     color: gold;
+    font-size: 20px;
+    transition: 0.2s ease all;
 }
