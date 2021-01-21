@@ -2,14 +2,15 @@ import { useLayoutEffect } from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+// let postData = [
+//     {id: 1, post: 'how are you?', like: 3},
+//     {id: 2, post: 'i`m fine', like: 7},
+// ]
 
-    let postData = [
-        {id: 1, post: 'how are you?', like: 3},
-        {id: 2, post: 'i`m fine', like: 7},
-    ]
+const MyPosts = (props) => {
 
-    let postElement = postData.map(el => <Post message={el.post} like={el.like} />)
+    let postElement = props.post.map(el => <Post message={el.post} like={el.like} />)
+    
 
     return (
         <div className={classes.my_posts}>

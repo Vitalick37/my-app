@@ -1,19 +1,10 @@
 import { useLayoutEffect } from 'react';
 import { BrowserRouter, NavLink, Route } from 'react-router-dom';
 import s from './Dialogs.module.css';
+import DialogItem from './DialogItem/DialogItem';
+import MessageItem from './Message/MessageItem';
 
-const DialogItem = (props) => {
-    return (
-        <li className={s.name_item}>
-            <NavLink to={'/dialogs/' + props.id} activeClassName={s.active} className={s.name_link}>{props.name}</NavLink>
-        </li>
-    )
-}
-const MessageItem = (props) => {
-    return (
-        <li className={s.message_item}>{props.messageItem}</li>
-    )
-}
+
 
 const Dialogs = () => {
 
@@ -39,7 +30,7 @@ const Dialogs = () => {
 
 
     return (
-        <BrowserRouter>
+        
             <div className={s.wrapper}>
                 <div className={s.name}>
                     <ul className={s.name_list}>
@@ -65,7 +56,7 @@ const Dialogs = () => {
                     </ul>
                 </div>
             </div>
-        </BrowserRouter>
+        
     );
 
 }

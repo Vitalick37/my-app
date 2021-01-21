@@ -11,6 +11,12 @@ import Setting from './components/Setting/Setting';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const App = () => {
+
+  let postData = [
+    {id: 1, post: 'how are you?', like: 3},
+    {id: 2, post: 'i`m fine', like: 7},
+]
+
   return ( 
     <BrowserRouter>
       <div className="grid">
@@ -19,11 +25,18 @@ const App = () => {
         <div className='content'>
           {/* <Content /> */}
           {/* <Dialogs /> */}
-          <Route path='/content' component={Content} />
+
+          {/* <Route path='/content' component={Content} />
           <Route path='/dialogs' component={Dialogs} />
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
-          <Route path='/settings' component={Setting} />
+          <Route path='/settings' component={Setting} /> */}
+
+          <Route path='/content' render={() => <Content data={postData} />} />
+          <Route path='/dialogs' render={() => <Dialogs />} />
+          <Route path='/news' render={() => <News />} />
+          <Route path='/music' render={() => <Music />} />
+          <Route path='/settings' render={() => <Setting />} />
         </div>
         
       </div>
