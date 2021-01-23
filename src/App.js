@@ -10,12 +10,9 @@ import Music from './components/Music/Music';
 import Setting from './components/Setting/Setting';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
 
-  let postData = [
-    {id: 1, post: 'how are you?', like: 3},
-    {id: 2, post: 'i`m fine', like: 7},
-]
+
 
   return ( 
     <BrowserRouter>
@@ -32,8 +29,8 @@ const App = () => {
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Setting} /> */}
 
-          <Route path='/content' render={() => <Content data={postData} />} />
-          <Route path='/dialogs' render={() => <Dialogs />} />
+          <Route path='/content' render={() => <Content data={props.postData} />} />
+          <Route path='/dialogs' render={() => <Dialogs dialogsData={props.dialogsData} messageData={props.messageData} />} />
           <Route path='/news' render={() => <News />} />
           <Route path='/music' render={() => <Music />} />
           <Route path='/settings' render={() => <Setting />} />
